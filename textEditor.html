@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html" charset="utf-8"/>
+    <title>YTextEditor</title>
+</head>
+<body>
+  <header>
+      <h1>YTextEditor v0.1</h1>
+      <h2>by YYC</h2>
+      <ul>
+          <li>支持中文输入</li>
+          <li>支持回退键删除字符</li>
+          <li>支持设置字体和字号</li>
+      </ul>
+  </header>
+<section>
+    <strong>family:</strong>
+    <select id='fontSelect'>
+        <option value='Arial'>Arial</option>
+        <option value='Comic Sans' selected>Comic Sans</option>
+        <option value='Lucida Sans'>Lucida Sans</option>
+        <option value='Helvetica'>Helvetica</option>
+        <option value='Palatino'>Palatino</option>
+    </select>
+
+    <strong>size:</strong>
+    <select id='sizeSelect'>
+        <option value='32'>32 px</option>
+        <option value='48' selected>48 px</option>
+        <option value='64'>64 px</option>
+        <option value='128'>128 px</option>
+    </select>
+
+    <button id="clear" type="button">清除画布</button>
+</section>
+
+<section style="border: 1px solid black;width:500px;height:300px;">
+    <canvas id="textEditor" width="500" height="300"></canvas>
+</section>
+
+<section style="overflow: hidden; position: absolute; height: 0px; left: 0px; top: 0px;">
+    <textarea autocorrect="off"
+              autocapitalize="off"
+              spellcheck="false"
+              tabindex="0"
+              style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none; font-size: 4px;">
+    </textarea>
+</section>
+
+<script src="bower_components/yoop/yOOP.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+
+<script src="TextCursor.js"></script>
+<script src="TextLine.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
